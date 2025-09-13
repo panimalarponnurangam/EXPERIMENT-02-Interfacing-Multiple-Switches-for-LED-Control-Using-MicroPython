@@ -64,8 +64,8 @@ Connect LED 2 to GP17 via a 330Ω resistor.
 Connect the other terminals of the switches to GND.
 
 ## PROGRAM (MicroPython)
-''''
-Interfacing Multiple switches with LED:
+
+### Interfacing Multiple switches with LED:
 ````
 from machine import Pin
 import time
