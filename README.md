@@ -2,11 +2,11 @@
 
 
  
-## NAME:
+## NAME:Panimalar P
 
-## DEPARTMENT:
+## DEPARTMENT:B.E-CSE(IoT)
 
-## ROLL NO:
+## ROLL NO:212222110031
 
 ## DATE OF EXPERIMENT:
 
@@ -65,13 +65,74 @@ Connect the other terminals of the switches to GND.
 
 ## PROGRAM (MicroPython)
 ''''
+Interfacing Multiple switches with LED:
+````
+from machine import Pin
+import time
 
+led = Pin(0, Pin.OUT)
+
+switch = Pin(1, Pin.IN, Pin.PULL_DOWN)
+
+while True:
+    if switch.value() == 1:   
+        led.value(1)
+        print("Switch ON → LED ON")
+    else:                    
+        led.value(0)
+        print("Switch OFF → LED OFF")
+    
+    time.sleep(0.1)
+````
+## OUTPUT:
+<img  src="https://github.com/user-attachments/assets/dda10247-168f-4df2-bf25-13af8c16dd9a" />
+
+## Interfacing Multiple switches with Multiple LED's:
+````
+from machine import Pin
+from time import sleep
+print("Welcome Pi Pico")
+switch1 = Pin(2, Pin.IN, Pin.PULL_UP)
+switch2 = Pin(3, Pin.IN, Pin.PULL_UP)
+led1 = Pin(15, Pin.OUT)
+led2 = Pin(16, Pin.OUT)
+
+while True:
+    sw1_state = switch1.value()  
+    sw2_state = switch2.value()
+    
+    print("Switch 1 state:", sw1_state)
+    print("Switch 2 state:", sw2_state)
+    
+    
+    led1.value(0)
+    led2.value(0)
+    
+    if sw1_state == 1 and sw2_state == 1:
+        led1.value(0)c
+        led2.value(0)
+    elif sw1_state == 1:
+        led1.value(0)
+        sleep(0.5)
+        led1.value(1)
+    elif sw2_state == 1:
+        led2.value(0)
+        sleep(0.5)
+        led2.value(1)
+    
+    sleep(0.1)
+````
 
 
  
 
 ## OUTPUT
+<img  src="https://github.com/user-attachments/assets/57121549-8d9c-4e6b-8930-716e75fd9019" />
 
+<img  alt="image" src="https://github.com/user-attachments/assets/beb7031f-19da-486e-969d-a01eb3746737" />
+
+<img  src="https://github.com/user-attachments/assets/fade0578-c7be-4660-8503-b6e34cb63a13" />
+<img  src="https://github.com/user-attachments/assets/e07c3bdc-df0d-46ee-bc20-64149c1a5bb3" />
 
 
 FIGURE-02: CIRCUIT CONNECTION
