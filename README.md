@@ -135,15 +135,7 @@ while True:
 <img  src="https://github.com/user-attachments/assets/e07c3bdc-df0d-46ee-bc20-64149c1a5bb3" />
 
 
-FIGURE-02: CIRCUIT CONNECTION
 
-FIGURE-03: CODE EXECUTION OUTPUT
-
-FIGURE-04: LED STATUS BASED ON SWITCH INPUTS
-## TIMING DIGAGRAM 
-
-
-UPLOAD YOUR TIMING DIGARAM HERE 
 
 
 
